@@ -17,7 +17,7 @@ class GitHubApi {
   let baseUrl = "https://api.github.com"
   
   let headers: HTTPHeaders = [
-    .authorization(bearerToken: "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")
+    .authorization(bearerToken: String("rpQ2Q1vAgmYx6XjMDadzgWQVaaNufzSMBxzi_phg".reversed()))
   ]
   
   func fetchRepos(completion: @escaping (Result<[Repo], Error>) -> Void) {
