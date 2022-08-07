@@ -9,21 +9,80 @@
 /* Begin PBXBuildFile section */
 		7B9DC7A6289FB82C0076A2CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7A5289FB82C0076A2CC /* AppDelegate.swift */; };
 		7B9DC7A8289FB82C0076A2CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7A7289FB82C0076A2CC /* SceneDelegate.swift */; };
-		7B9DC7AA289FB82C0076A2CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7A9289FB82C0076A2CC /* ViewController.swift */; };
-		7B9DC7AD289FB82C0076A2CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9DC7AB289FB82C0076A2CC /* Main.storyboard */; };
 		7B9DC7AF289FB82E0076A2CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9DC7AE289FB82E0076A2CC /* Assets.xcassets */; };
 		7B9DC7B2289FB82E0076A2CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9DC7B0289FB82E0076A2CC /* LaunchScreen.storyboard */; };
+		7B9DC7BB289FC4F30076A2CC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7B9DC7BA289FC4F30076A2CC /* SnapKit */; };
+		7B9DC7BE289FC4FD0076A2CC /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7BD289FC4FD0076A2CC /* Validator.swift */; };
+		7B9DC7C4289FC5050076A2CC /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7C0289FC5050076A2CC /* PaddingTextField.swift */; };
+		7B9DC7C5289FC5050076A2CC /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7C1289FC5050076A2CC /* LoginFormView.swift */; };
+		7B9DC7C6289FC5050076A2CC /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7C2289FC5050076A2CC /* LoginTextField.swift */; };
+		7B9DC7C7289FC5050076A2CC /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7C3289FC5050076A2CC /* CircleImageView.swift */; };
+		7B9DC7CA289FC5080076A2CC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7C9289FC5080076A2CC /* LoginViewController.swift */; };
+		7B9DC7D2289FC50C0076A2CC /* UILabel + Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7CD289FC50C0076A2CC /* UILabel + Init.swift */; };
+		7B9DC7D3289FC50C0076A2CC /* UIColor + Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7CF289FC50C0076A2CC /* UIColor + Constants.swift */; };
+		7B9DC7D4289FC50C0076A2CC /* UIView + Twitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7D1289FC50C0076A2CC /* UIView + Twitch.swift */; };
+		7B9DC7D7289FC50F0076A2CC /* RepoCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7D6289FC50F0076A2CC /* RepoCountView.swift */; };
+		7B9DC7DB289FC5130076A2CC /* RepoCellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7D9289FC5130076A2CC /* RepoCellCell.swift */; };
+		7B9DC7DC289FC5130076A2CC /* RepoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7DA289FC5130076A2CC /* RepoCellViewModel.swift */; };
+		7B9DC7E1289FC62F0076A2CC /* GitHubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7E0289FC62F0076A2CC /* GitHubApi.swift */; };
+		7B9DC7E4289FC6F40076A2CC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7B9DC7E3289FC6F40076A2CC /* Alamofire */; };
+		7B9DC7E7289FCD890076A2CC /* RepoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7E6289FCD890076A2CC /* RepoListInteractor.swift */; };
+		7B9DC7E9289FCD940076A2CC /* RepoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7E8289FCD940076A2CC /* RepoListPresenter.swift */; };
+		7B9DC7EB289FCD9C0076A2CC /* RepoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7EA289FCD9C0076A2CC /* RepoListRouter.swift */; };
+		7B9DC7ED289FCDA20076A2CC /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7EC289FCDA20076A2CC /* RepoListViewController.swift */; };
+		7B9DC7EF289FCDAE0076A2CC /* RepoListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7EE289FCDAE0076A2CC /* RepoListConfigurator.swift */; };
+		7B9DC7F1289FCDBD0076A2CC /* RepoListInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7F0289FCDBD0076A2CC /* RepoListInterfaces.swift */; };
+		7B9DC7F4289FE04E0076A2CC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7B9DC7F3289FE04E0076A2CC /* Kingfisher */; };
+		7B9DC7F6289FE5F80076A2CC /* CollectionViewLayoutFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7F5289FE5F80076A2CC /* CollectionViewLayoutFactory.swift */; };
+		7B9DC7FA289FEB930076A2CC /* CommitsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7F9289FEB930076A2CC /* CommitsListView.swift */; };
+		7B9DC7FC289FEBFC0076A2CC /* CommitCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7FB289FEBFC0076A2CC /* CommitCellViewModel.swift */; };
+		7B9DC7FF289FEC0B0076A2CC /* CommitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7FE289FEC0B0076A2CC /* CommitCell.swift */; };
+		7B9DC801289FF2560076A2CC /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC800289FF2560076A2CC /* MainNavigationController.swift */; };
+		7B9DC80528A009AA0076A2CC /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC80428A009AA0076A2CC /* Commit.swift */; };
+		7B9DC80728A009C40076A2CC /* CommitApiResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC80628A009C40076A2CC /* CommitApiResponce.swift */; };
+		7B9DC80928A009D30076A2CC /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC80828A009D20076A2CC /* GitHubUser.swift */; };
+		7B9DC80B28A009E50076A2CC /* RepoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC80A28A009E50076A2CC /* RepoOwner.swift */; };
+		7B9DC80D28A00A040076A2CC /* CommitAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC80C28A00A040076A2CC /* CommitAuthor.swift */; };
+		7B9DC80F28A00A0D0076A2CC /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC80E28A00A0D0076A2CC /* Repo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B9DC7A2289FB82C0076A2CC /* PocketGithub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketGithub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9DC7A5289FB82C0076A2CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B9DC7A7289FB82C0076A2CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B9DC7A9289FB82C0076A2CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7B9DC7AC289FB82C0076A2CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B9DC7AE289FB82E0076A2CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B9DC7B1289FB82E0076A2CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B9DC7B3289FB82E0076A2CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B9DC7BD289FC4FD0076A2CC /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		7B9DC7C0289FC5050076A2CC /* PaddingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
+		7B9DC7C1289FC5050076A2CC /* LoginFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
+		7B9DC7C2289FC5050076A2CC /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		7B9DC7C3289FC5050076A2CC /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		7B9DC7C9289FC5080076A2CC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7B9DC7CD289FC50C0076A2CC /* UILabel + Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel + Init.swift"; sourceTree = "<group>"; };
+		7B9DC7CF289FC50C0076A2CC /* UIColor + Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + Constants.swift"; sourceTree = "<group>"; };
+		7B9DC7D1289FC50C0076A2CC /* UIView + Twitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Twitch.swift"; sourceTree = "<group>"; };
+		7B9DC7D6289FC50F0076A2CC /* RepoCountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCountView.swift; sourceTree = "<group>"; };
+		7B9DC7D9289FC5130076A2CC /* RepoCellCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCellCell.swift; sourceTree = "<group>"; };
+		7B9DC7DA289FC5130076A2CC /* RepoCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCellViewModel.swift; sourceTree = "<group>"; };
+		7B9DC7E0289FC62F0076A2CC /* GitHubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubApi.swift; sourceTree = "<group>"; };
+		7B9DC7E6289FCD890076A2CC /* RepoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListInteractor.swift; sourceTree = "<group>"; };
+		7B9DC7E8289FCD940076A2CC /* RepoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListPresenter.swift; sourceTree = "<group>"; };
+		7B9DC7EA289FCD9C0076A2CC /* RepoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListRouter.swift; sourceTree = "<group>"; };
+		7B9DC7EC289FCDA20076A2CC /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
+		7B9DC7EE289FCDAE0076A2CC /* RepoListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListConfigurator.swift; sourceTree = "<group>"; };
+		7B9DC7F0289FCDBD0076A2CC /* RepoListInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListInterfaces.swift; sourceTree = "<group>"; };
+		7B9DC7F5289FE5F80076A2CC /* CollectionViewLayoutFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutFactory.swift; sourceTree = "<group>"; };
+		7B9DC7F9289FEB930076A2CC /* CommitsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsListView.swift; sourceTree = "<group>"; };
+		7B9DC7FB289FEBFC0076A2CC /* CommitCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCellViewModel.swift; sourceTree = "<group>"; };
+		7B9DC7FE289FEC0B0076A2CC /* CommitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCell.swift; sourceTree = "<group>"; };
+		7B9DC800289FF2560076A2CC /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		7B9DC80428A009AA0076A2CC /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		7B9DC80628A009C40076A2CC /* CommitApiResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitApiResponce.swift; sourceTree = "<group>"; };
+		7B9DC80828A009D20076A2CC /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
+		7B9DC80A28A009E50076A2CC /* RepoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoOwner.swift; sourceTree = "<group>"; };
+		7B9DC80C28A00A040076A2CC /* CommitAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitAuthor.swift; sourceTree = "<group>"; };
+		7B9DC80E28A00A0D0076A2CC /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +90,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9DC7F4289FE04E0076A2CC /* Kingfisher in Frameworks */,
+				7B9DC7BB289FC4F30076A2CC /* SnapKit in Frameworks */,
+				7B9DC7E4289FC6F40076A2CC /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +118,171 @@
 		7B9DC7A4289FB82C0076A2CC /* PocketGithub */ = {
 			isa = PBXGroup;
 			children = (
+				7B9DC81328A00A9A0076A2CC /* MainNavigationController */,
+				7B9DC81228A00A8B0076A2CC /* LoginScreenModule */,
+				7B9DC80328A0099F0076A2CC /* Model */,
+				7B9DC7F8289FE6910076A2CC /* CommitsListModule */,
+				7B9DC7E5289FCD600076A2CC /* RepoListModule */,
+				7B9DC7DF289FC6230076A2CC /* Service */,
+				7B9DC7CB289FC50C0076A2CC /* Extension */,
+				7B9DC7C8289FC5080076A2CC /* Controllers */,
+				7B9DC7BF289FC5050076A2CC /* VIew */,
+				7B9DC7BC289FC4FD0076A2CC /* Helpers */,
 				7B9DC7A5289FB82C0076A2CC /* AppDelegate.swift */,
 				7B9DC7A7289FB82C0076A2CC /* SceneDelegate.swift */,
-				7B9DC7A9289FB82C0076A2CC /* ViewController.swift */,
-				7B9DC7AB289FB82C0076A2CC /* Main.storyboard */,
 				7B9DC7AE289FB82E0076A2CC /* Assets.xcassets */,
 				7B9DC7B0289FB82E0076A2CC /* LaunchScreen.storyboard */,
 				7B9DC7B3289FB82E0076A2CC /* Info.plist */,
 			);
 			path = PocketGithub;
+			sourceTree = "<group>";
+		};
+		7B9DC7BC289FC4FD0076A2CC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC7BD289FC4FD0076A2CC /* Validator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7B9DC7BF289FC5050076A2CC /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC7C0289FC5050076A2CC /* PaddingTextField.swift */,
+				7B9DC7C1289FC5050076A2CC /* LoginFormView.swift */,
+				7B9DC7C2289FC5050076A2CC /* LoginTextField.swift */,
+				7B9DC7C3289FC5050076A2CC /* CircleImageView.swift */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		7B9DC7C8289FC5080076A2CC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7B9DC7CB289FC50C0076A2CC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC7CC289FC50C0076A2CC /* UILabel */,
+				7B9DC7CE289FC50C0076A2CC /* UIColor */,
+				7B9DC7D0289FC50C0076A2CC /* UIView */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		7B9DC7CC289FC50C0076A2CC /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC7CD289FC50C0076A2CC /* UILabel + Init.swift */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		7B9DC7CE289FC50C0076A2CC /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC7CF289FC50C0076A2CC /* UIColor + Constants.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		7B9DC7D0289FC50C0076A2CC /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC7D1289FC50C0076A2CC /* UIView + Twitch.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		7B9DC7D5289FC50F0076A2CC /* RepoCountView */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC7D6289FC50F0076A2CC /* RepoCountView.swift */,
+			);
+			path = RepoCountView;
+			sourceTree = "<group>";
+		};
+		7B9DC7D8289FC5130076A2CC /* RepoCell */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC7D9289FC5130076A2CC /* RepoCellCell.swift */,
+				7B9DC7DA289FC5130076A2CC /* RepoCellViewModel.swift */,
+			);
+			path = RepoCell;
+			sourceTree = "<group>";
+		};
+		7B9DC7DF289FC6230076A2CC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC7E0289FC62F0076A2CC /* GitHubApi.swift */,
+				7B9DC7F5289FE5F80076A2CC /* CollectionViewLayoutFactory.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7B9DC7E5289FCD600076A2CC /* RepoListModule */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC7D5289FC50F0076A2CC /* RepoCountView */,
+				7B9DC7D8289FC5130076A2CC /* RepoCell */,
+				7B9DC7E6289FCD890076A2CC /* RepoListInteractor.swift */,
+				7B9DC7E8289FCD940076A2CC /* RepoListPresenter.swift */,
+				7B9DC7EA289FCD9C0076A2CC /* RepoListRouter.swift */,
+				7B9DC7EC289FCDA20076A2CC /* RepoListViewController.swift */,
+				7B9DC7EE289FCDAE0076A2CC /* RepoListConfigurator.swift */,
+				7B9DC7F0289FCDBD0076A2CC /* RepoListInterfaces.swift */,
+			);
+			path = RepoListModule;
+			sourceTree = "<group>";
+		};
+		7B9DC7F8289FE6910076A2CC /* CommitsListModule */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC7FD289FEC010076A2CC /* CommitCell */,
+				7B9DC7F9289FEB930076A2CC /* CommitsListView.swift */,
+			);
+			path = CommitsListModule;
+			sourceTree = "<group>";
+		};
+		7B9DC7FD289FEC010076A2CC /* CommitCell */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC7FB289FEBFC0076A2CC /* CommitCellViewModel.swift */,
+				7B9DC7FE289FEC0B0076A2CC /* CommitCell.swift */,
+			);
+			path = CommitCell;
+			sourceTree = "<group>";
+		};
+		7B9DC80328A0099F0076A2CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC80428A009AA0076A2CC /* Commit.swift */,
+				7B9DC80E28A00A0D0076A2CC /* Repo.swift */,
+				7B9DC80628A009C40076A2CC /* CommitApiResponce.swift */,
+				7B9DC80828A009D20076A2CC /* GitHubUser.swift */,
+				7B9DC80A28A009E50076A2CC /* RepoOwner.swift */,
+				7B9DC80C28A00A040076A2CC /* CommitAuthor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B9DC81228A00A8B0076A2CC /* LoginScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC7C9289FC5080076A2CC /* LoginViewController.swift */,
+			);
+			path = LoginScreenModule;
+			sourceTree = "<group>";
+		};
+		7B9DC81328A00A9A0076A2CC /* MainNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC800289FF2560076A2CC /* MainNavigationController.swift */,
+			);
+			path = MainNavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +301,11 @@
 			dependencies = (
 			);
 			name = PocketGithub;
+			packageProductDependencies = (
+				7B9DC7BA289FC4F30076A2CC /* SnapKit */,
+				7B9DC7E3289FC6F40076A2CC /* Alamofire */,
+				7B9DC7F3289FE04E0076A2CC /* Kingfisher */,
+			);
 			productName = PocketGithub;
 			productReference = 7B9DC7A2289FB82C0076A2CC /* PocketGithub.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +334,11 @@
 				Base,
 			);
 			mainGroup = 7B9DC799289FB82C0076A2CC;
+			packageReferences = (
+				7B9DC7B9289FC4F30076A2CC /* XCRemoteSwiftPackageReference "SnapKit" */,
+				7B9DC7E2289FC6F40076A2CC /* XCRemoteSwiftPackageReference "Alamofire" */,
+				7B9DC7F2289FE04E0076A2CC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 7B9DC7A3289FB82C0076A2CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +355,6 @@
 			files = (
 				7B9DC7B2289FB82E0076A2CC /* LaunchScreen.storyboard in Resources */,
 				7B9DC7AF289FB82E0076A2CC /* Assets.xcassets in Resources */,
-				7B9DC7AD289FB82C0076A2CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +365,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B9DC7AA289FB82C0076A2CC /* ViewController.swift in Sources */,
+				7B9DC7E7289FCD890076A2CC /* RepoListInteractor.swift in Sources */,
+				7B9DC7DC289FC5130076A2CC /* RepoCellViewModel.swift in Sources */,
+				7B9DC7D3289FC50C0076A2CC /* UIColor + Constants.swift in Sources */,
+				7B9DC7CA289FC5080076A2CC /* LoginViewController.swift in Sources */,
+				7B9DC7FF289FEC0B0076A2CC /* CommitCell.swift in Sources */,
+				7B9DC7E9289FCD940076A2CC /* RepoListPresenter.swift in Sources */,
+				7B9DC80928A009D30076A2CC /* GitHubUser.swift in Sources */,
+				7B9DC7C7289FC5050076A2CC /* CircleImageView.swift in Sources */,
+				7B9DC7D4289FC50C0076A2CC /* UIView + Twitch.swift in Sources */,
+				7B9DC7D2289FC50C0076A2CC /* UILabel + Init.swift in Sources */,
+				7B9DC80528A009AA0076A2CC /* Commit.swift in Sources */,
+				7B9DC7BE289FC4FD0076A2CC /* Validator.swift in Sources */,
+				7B9DC7ED289FCDA20076A2CC /* RepoListViewController.swift in Sources */,
+				7B9DC7E1289FC62F0076A2CC /* GitHubApi.swift in Sources */,
+				7B9DC7C5289FC5050076A2CC /* LoginFormView.swift in Sources */,
+				7B9DC7F1289FCDBD0076A2CC /* RepoListInterfaces.swift in Sources */,
 				7B9DC7A6289FB82C0076A2CC /* AppDelegate.swift in Sources */,
+				7B9DC80728A009C40076A2CC /* CommitApiResponce.swift in Sources */,
 				7B9DC7A8289FB82C0076A2CC /* SceneDelegate.swift in Sources */,
+				7B9DC7D7289FC50F0076A2CC /* RepoCountView.swift in Sources */,
+				7B9DC7C4289FC5050076A2CC /* PaddingTextField.swift in Sources */,
+				7B9DC80B28A009E50076A2CC /* RepoOwner.swift in Sources */,
+				7B9DC7FC289FEBFC0076A2CC /* CommitCellViewModel.swift in Sources */,
+				7B9DC7F6289FE5F80076A2CC /* CollectionViewLayoutFactory.swift in Sources */,
+				7B9DC7FA289FEB930076A2CC /* CommitsListView.swift in Sources */,
+				7B9DC7C6289FC5050076A2CC /* LoginTextField.swift in Sources */,
+				7B9DC7EB289FCD9C0076A2CC /* RepoListRouter.swift in Sources */,
+				7B9DC80F28A00A0D0076A2CC /* Repo.swift in Sources */,
+				7B9DC80D28A00A040076A2CC /* CommitAuthor.swift in Sources */,
+				7B9DC7EF289FCDAE0076A2CC /* RepoListConfigurator.swift in Sources */,
+				7B9DC801289FF2560076A2CC /* MainNavigationController.swift in Sources */,
+				7B9DC7DB289FC5130076A2CC /* RepoCellCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7B9DC7AB289FB82C0076A2CC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B9DC7AC289FB82C0076A2CC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7B9DC7B0289FB82E0076A2CC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -217,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -294,9 +542,10 @@
 				INFOPLIST_FILE = PocketGithub/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,9 +571,10 @@
 				INFOPLIST_FILE = PocketGithub/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,6 +610,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B9DC7B9289FC4F30076A2CC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		7B9DC7E2289FC6F40076A2CC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		7B9DC7F2289FE04E0076A2CC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B9DC7BA289FC4F30076A2CC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B9DC7B9289FC4F30076A2CC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		7B9DC7E3289FC6F40076A2CC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B9DC7E2289FC6F40076A2CC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		7B9DC7F3289FE04E0076A2CC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B9DC7F2289FE04E0076A2CC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7B9DC79A289FB82C0076A2CC /* Project object */;
 }
