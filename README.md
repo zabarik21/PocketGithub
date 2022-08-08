@@ -16,8 +16,8 @@
 <table>
     <tr>
       <td>Login Screen</td>
-      <td>Setup profile screen</td>
-      <td>Setup profile screen</td>
+      <td>Repositories screen</td>
+      <td>Commits screen</td>
     </tr>
     <tr>
       <td><img src="https://i.postimg.cc/Wbw9MJgs/Simulator-Screen-Shot-i-Phone-X-2022-08-08-at-18-25-32.png"></td>
