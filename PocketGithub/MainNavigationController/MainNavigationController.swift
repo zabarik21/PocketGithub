@@ -17,6 +17,9 @@ class MainNavigationController: UINavigationController {
     setupNavigationBar()
   }
   
+  override init(nibName: String?, bundle: Bundle?) {
+    super.init(nibName: nil, bundle: nil)
+  }
   
   private func setupNavigationBar() {
     navigationBar.tintColor = .white

@@ -14,7 +14,6 @@
 		7B9DC7BB289FC4F30076A2CC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7B9DC7BA289FC4F30076A2CC /* SnapKit */; };
 		7B9DC7BE289FC4FD0076A2CC /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7BD289FC4FD0076A2CC /* Validator.swift */; };
 		7B9DC7C4289FC5050076A2CC /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7C0289FC5050076A2CC /* PaddingTextField.swift */; };
-		7B9DC7C5289FC5050076A2CC /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7C1289FC5050076A2CC /* LoginFormView.swift */; };
 		7B9DC7C6289FC5050076A2CC /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7C2289FC5050076A2CC /* LoginTextField.swift */; };
 		7B9DC7C7289FC5050076A2CC /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7C3289FC5050076A2CC /* CircleImageView.swift */; };
 		7B9DC7CA289FC5080076A2CC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7C9289FC5080076A2CC /* LoginViewController.swift */; };
@@ -44,6 +43,15 @@
 		7B9DC80B28A009E50076A2CC /* RepoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC80A28A009E50076A2CC /* RepoOwner.swift */; };
 		7B9DC80D28A00A040076A2CC /* CommitAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC80C28A00A040076A2CC /* CommitAuthor.swift */; };
 		7B9DC80F28A00A0D0076A2CC /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC80E28A00A0D0076A2CC /* Repo.swift */; };
+		7B9DC81628A0CD220076A2CC /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7B9DC81528A0CD220076A2CC /* OAuthSwift */; };
+		7B9DC81828A0EBB30076A2CC /* LoginViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC81728A0EBB30076A2CC /* LoginViewRouter.swift */; };
+		7B9DC81B28A0F3510076A2CC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC81A28A0F3510076A2CC /* AuthService.swift */; };
+		7B9DC81D28A106B10076A2CC /* LoginViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC81C28A106B10076A2CC /* LoginViewInteractor.swift */; };
+		7B9DC81F28A106BF0076A2CC /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC81E28A106BF0076A2CC /* LoginViewPresenter.swift */; };
+		7B9DC82128A106D80076A2CC /* LoginViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC82028A106D80076A2CC /* LoginViewConfigurator.swift */; };
+		7B9DC82328A106E30076A2CC /* LoginViewInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC82228A106E30076A2CC /* LoginViewInterfaces.swift */; };
+		7B9DC82628A107A10076A2CC /* UIVIewController + UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC82528A107A10076A2CC /* UIVIewController + UIAlertController.swift */; };
+		7B9DC82B28A12A530076A2CC /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC82A28A12A530076A2CC /* StorageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +63,6 @@
 		7B9DC7B3289FB82E0076A2CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B9DC7BD289FC4FD0076A2CC /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		7B9DC7C0289FC5050076A2CC /* PaddingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
-		7B9DC7C1289FC5050076A2CC /* LoginFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
 		7B9DC7C2289FC5050076A2CC /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		7B9DC7C3289FC5050076A2CC /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		7B9DC7C9289FC5080076A2CC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +90,14 @@
 		7B9DC80A28A009E50076A2CC /* RepoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoOwner.swift; sourceTree = "<group>"; };
 		7B9DC80C28A00A040076A2CC /* CommitAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitAuthor.swift; sourceTree = "<group>"; };
 		7B9DC80E28A00A0D0076A2CC /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		7B9DC81728A0EBB30076A2CC /* LoginViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewRouter.swift; sourceTree = "<group>"; };
+		7B9DC81A28A0F3510076A2CC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		7B9DC81C28A106B10076A2CC /* LoginViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInteractor.swift; sourceTree = "<group>"; };
+		7B9DC81E28A106BF0076A2CC /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
+		7B9DC82028A106D80076A2CC /* LoginViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewConfigurator.swift; sourceTree = "<group>"; };
+		7B9DC82228A106E30076A2CC /* LoginViewInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInterfaces.swift; sourceTree = "<group>"; };
+		7B9DC82528A107A10076A2CC /* UIVIewController + UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController + UIAlertController.swift"; sourceTree = "<group>"; };
+		7B9DC82A28A12A530076A2CC /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9DC81628A0CD220076A2CC /* OAuthSwift in Frameworks */,
 				7B9DC7F4289FE04E0076A2CC /* Kingfisher in Frameworks */,
 				7B9DC7BB289FC4F30076A2CC /* SnapKit in Frameworks */,
 				7B9DC7E4289FC6F40076A2CC /* Alamofire in Frameworks */,
@@ -149,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				7B9DC7C0289FC5050076A2CC /* PaddingTextField.swift */,
-				7B9DC7C1289FC5050076A2CC /* LoginFormView.swift */,
 				7B9DC7C2289FC5050076A2CC /* LoginTextField.swift */,
 				7B9DC7C3289FC5050076A2CC /* CircleImageView.swift */,
 			);
@@ -166,6 +181,7 @@
 		7B9DC7CB289FC50C0076A2CC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7B9DC82428A107950076A2CC /* UIViewController */,
 				7B9DC7CC289FC50C0076A2CC /* UILabel */,
 				7B9DC7CE289FC50C0076A2CC /* UIColor */,
 				7B9DC7D0289FC50C0076A2CC /* UIView */,
@@ -219,6 +235,8 @@
 			children = (
 				7B9DC7E0289FC62F0076A2CC /* GitHubApi.swift */,
 				7B9DC7F5289FE5F80076A2CC /* CollectionViewLayoutFactory.swift */,
+				7B9DC81A28A0F3510076A2CC /* AuthService.swift */,
+				7B9DC82A28A12A530076A2CC /* StorageService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -273,6 +291,11 @@
 			isa = PBXGroup;
 			children = (
 				7B9DC7C9289FC5080076A2CC /* LoginViewController.swift */,
+				7B9DC81728A0EBB30076A2CC /* LoginViewRouter.swift */,
+				7B9DC81C28A106B10076A2CC /* LoginViewInteractor.swift */,
+				7B9DC81E28A106BF0076A2CC /* LoginViewPresenter.swift */,
+				7B9DC82028A106D80076A2CC /* LoginViewConfigurator.swift */,
+				7B9DC82228A106E30076A2CC /* LoginViewInterfaces.swift */,
 			);
 			path = LoginScreenModule;
 			sourceTree = "<group>";
@@ -283,6 +306,14 @@
 				7B9DC800289FF2560076A2CC /* MainNavigationController.swift */,
 			);
 			path = MainNavigationController;
+			sourceTree = "<group>";
+		};
+		7B9DC82428A107950076A2CC /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC82528A107A10076A2CC /* UIVIewController + UIAlertController.swift */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +336,7 @@
 				7B9DC7BA289FC4F30076A2CC /* SnapKit */,
 				7B9DC7E3289FC6F40076A2CC /* Alamofire */,
 				7B9DC7F3289FE04E0076A2CC /* Kingfisher */,
+				7B9DC81528A0CD220076A2CC /* OAuthSwift */,
 			);
 			productName = PocketGithub;
 			productReference = 7B9DC7A2289FB82C0076A2CC /* PocketGithub.app */;
@@ -338,6 +370,7 @@
 				7B9DC7B9289FC4F30076A2CC /* XCRemoteSwiftPackageReference "SnapKit" */,
 				7B9DC7E2289FC6F40076A2CC /* XCRemoteSwiftPackageReference "Alamofire" */,
 				7B9DC7F2289FE04E0076A2CC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7B9DC81428A0CD220076A2CC /* XCRemoteSwiftPackageReference "OAuthSwift" */,
 			);
 			productRefGroup = 7B9DC7A3289FB82C0076A2CC /* Products */;
 			projectDirPath = "";
@@ -370,6 +403,7 @@
 				7B9DC7D3289FC50C0076A2CC /* UIColor + Constants.swift in Sources */,
 				7B9DC7CA289FC5080076A2CC /* LoginViewController.swift in Sources */,
 				7B9DC7FF289FEC0B0076A2CC /* CommitCell.swift in Sources */,
+				7B9DC82B28A12A530076A2CC /* StorageService.swift in Sources */,
 				7B9DC7E9289FCD940076A2CC /* RepoListPresenter.swift in Sources */,
 				7B9DC80928A009D30076A2CC /* GitHubUser.swift in Sources */,
 				7B9DC7C7289FC5050076A2CC /* CircleImageView.swift in Sources */,
@@ -379,7 +413,8 @@
 				7B9DC7BE289FC4FD0076A2CC /* Validator.swift in Sources */,
 				7B9DC7ED289FCDA20076A2CC /* RepoListViewController.swift in Sources */,
 				7B9DC7E1289FC62F0076A2CC /* GitHubApi.swift in Sources */,
-				7B9DC7C5289FC5050076A2CC /* LoginFormView.swift in Sources */,
+				7B9DC81F28A106BF0076A2CC /* LoginViewPresenter.swift in Sources */,
+				7B9DC81828A0EBB30076A2CC /* LoginViewRouter.swift in Sources */,
 				7B9DC7F1289FCDBD0076A2CC /* RepoListInterfaces.swift in Sources */,
 				7B9DC7A6289FB82C0076A2CC /* AppDelegate.swift in Sources */,
 				7B9DC80728A009C40076A2CC /* CommitApiResponce.swift in Sources */,
@@ -389,12 +424,17 @@
 				7B9DC80B28A009E50076A2CC /* RepoOwner.swift in Sources */,
 				7B9DC7FC289FEBFC0076A2CC /* CommitCellViewModel.swift in Sources */,
 				7B9DC7F6289FE5F80076A2CC /* CollectionViewLayoutFactory.swift in Sources */,
+				7B9DC82128A106D80076A2CC /* LoginViewConfigurator.swift in Sources */,
 				7B9DC7FA289FEB930076A2CC /* CommitsListView.swift in Sources */,
+				7B9DC81D28A106B10076A2CC /* LoginViewInteractor.swift in Sources */,
 				7B9DC7C6289FC5050076A2CC /* LoginTextField.swift in Sources */,
 				7B9DC7EB289FCD9C0076A2CC /* RepoListRouter.swift in Sources */,
 				7B9DC80F28A00A0D0076A2CC /* Repo.swift in Sources */,
 				7B9DC80D28A00A040076A2CC /* CommitAuthor.swift in Sources */,
 				7B9DC7EF289FCDAE0076A2CC /* RepoListConfigurator.swift in Sources */,
+				7B9DC82328A106E30076A2CC /* LoginViewInterfaces.swift in Sources */,
+				7B9DC82628A107A10076A2CC /* UIVIewController + UIAlertController.swift in Sources */,
+				7B9DC81B28A0F3510076A2CC /* AuthService.swift in Sources */,
 				7B9DC801289FF2560076A2CC /* MainNavigationController.swift in Sources */,
 				7B9DC7DB289FC5130076A2CC /* RepoCellCell.swift in Sources */,
 			);
@@ -542,7 +582,6 @@
 				INFOPLIST_FILE = PocketGithub/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -571,7 +610,6 @@
 				INFOPLIST_FILE = PocketGithub/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -636,6 +674,14 @@
 				kind = branch;
 			};
 		};
+		7B9DC81428A0CD220076A2CC /* XCRemoteSwiftPackageReference "OAuthSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OAuthSwift/OAuthSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -653,6 +699,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7B9DC7F2289FE04E0076A2CC /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		7B9DC81528A0CD220076A2CC /* OAuthSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B9DC81428A0CD220076A2CC /* XCRemoteSwiftPackageReference "OAuthSwift" */;
+			productName = OAuthSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

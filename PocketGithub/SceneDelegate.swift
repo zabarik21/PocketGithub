@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import OAuthSwift
+import Alamofire
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -13,14 +15,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
   @available(iOS 13.0, *)
+  func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+    guard let url = URLContexts.first?.url else { return }
+    print(url)
+    if url.host == "oauth-callback" {
+      AuthService.shared.handleCodeUrl(url: url)
+    }
+  }
+  
+  @available(iOS 13.0, *)
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     guard let windowScene = (scene as? UIWindowScene) else { return }
     
     let window = UIWindow(windowScene: windowScene)
     self.window = window
-    let layout = CollectionViewLayoutFactory.shared.getReposListLayout(windowBounds: window.bounds)
-    let navVC = MainNavigationController(rootViewController: RepoListViewController(collectionViewLayout: layout))
-    window.rootViewController = navVC
+    let viewController = LoginViewController()
+    window.rootViewController = viewController
     window.makeKeyAndVisible()
   }
 

@@ -6,14 +6,41 @@
 //
 
 import UIKit
+import OAuthSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+  var window: UIWindow?
+  
+  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    guard let souceApp = options[.sourceApplication] as? String else { return false }
+    if souceApp == "com.apple.SafariViewService" || souceApp == "com.apple.mobilesafari" {
+      if url.host == "oauth-callback" {
+        AuthService.shared.handleCodeUrl(url: url)
+      }
+      return true
+    }
+    return false
+  }
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    if #available(iOS 13.0, *) {
+      
+    } else {
+      let viewController: UIViewController?
+      let window = UIWindow(frame: UIScreen.main.bounds)
+      if let _ = StorageService.shared.getToken() {
+        let layout = CollectionViewLayoutFactory.shared.getReposListLayout(windowBounds: window.bounds)
+        let repoViewController = RepoListViewController(collectionViewLayout: layout)
+        viewController = MainNavigationController(rootViewController: repoViewController)
+      } else {
+        viewController = LoginViewController()
+      }
+      window.rootViewController = viewController
+      self.window = window
+      self.window?.makeKeyAndVisible()
+    }
     return true
   }
 

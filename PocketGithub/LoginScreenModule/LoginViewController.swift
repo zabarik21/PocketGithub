@@ -6,20 +6,46 @@
 //
 
 import UIKit
+import OAuthSwift
+
 
 class LoginViewController: UIViewController {
   
   private var logoView: UIImageView!
-  private var formView: LoginFormView!
+  private var signInButton: UIButton!
+  
+  public var authService = AuthService.shared
+  
+  var presenter: LoginViewOutputProtocol!
+  private var configurator = LoginViewConfigurator()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     setupElements()
+    configurator.configure(with: self)
+    signInButton.addTarget(self, action: #selector(signInTouched), for: .touchUpInside)
+  }
+  
+  @objc private func signInTouched() {
+    presenter.loginButtonTouched()
   }
   
 }
 
-// MARK: Setup UI
+// MARK: - LoginViewInputProtocol
+extension LoginViewController: LoginViewInputProtocol {
+  
+  func showAlert(with title: String, message: String) {
+    self.showAlertController(
+      title: title,
+      message: message,
+      style: .alert
+    )
+  }
+  
+}
+
+// MARK: - Setup UI
 extension LoginViewController {
   
   enum Constants {
@@ -32,19 +58,22 @@ extension LoginViewController {
   private func setupElements() {
     view.backgroundColor = .loginTextFieldBgColor
     setupLogo()
-    setupForm()
+    setupButton()
     setupConstraints()
+  }
+  
+  private func setupButton() {
+    signInButton = UIButton(type: .system)
+    signInButton.backgroundColor = .signInButtonColor
+    signInButton.layer.cornerRadius = 5
+    signInButton.setTitle("Sign in", for: .normal)
+    signInButton.setTitleColor(.white, for: .normal)
   }
   
   private func setupLogo() {
     logoView = UIImageView()
     logoView.image = UIImage(named: "logo")
     logoView.contentMode = .scaleAspectFit
-  }
-  
-  private func setupForm() {
-    formView = LoginFormView()
-    formView.loginFormDelegate = self
   }
   
   private func setupConstraints() {
@@ -65,25 +94,20 @@ extension LoginViewController {
       make.height.width.equalTo(logoSide)
     }
     
-    view.addSubview(formView)
+    view.addSubview(signInButton)
     
-    formView.snp.makeConstraints { make in
+    signInButton.snp.makeConstraints { make in
+      
       make.top
         .equalTo(logoView.snp.bottom)
         .offset(height * Constants.topFormMult)
-      make.horizontalEdges
-        .equalToSuperview()
-        .inset(width * Constants.horizontalFormMult)
+      make.height.equalTo(30)
+      make.centerX.equalToSuperview()
+      make.width
+        .equalTo(logoView)
+        .offset(30)
     }
     
-  }
-  
-}
-
-extension LoginViewController: LoginFormDelegate {
-  
-  func signIn(login: String, password: String) {
-    print("Sign in")
   }
   
 }

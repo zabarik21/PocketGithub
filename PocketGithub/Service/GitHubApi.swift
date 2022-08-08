@@ -14,15 +14,22 @@ class GitHubApi {
   
   static let shared = GitHubApi()
   
-  let baseUrl = "https://api.github.com"
+  private var token: String?
   
-  let headers: HTTPHeaders = [
-    .authorization(bearerToken: String("rpQ2Q1vAgmYx6XjMDadzgWQVaaNufzSMBxzi_phg".reversed()))
-  ]
+  private init() {
+    self.token = StorageService.shared.getToken()
+  }
+  
+  private func getHeaders() -> HTTPHeaders {
+    let headers: HTTPHeaders = [
+      .authorization(bearerToken: token ?? "")
+    ]
+    return headers
+  }
   
   func fetchRepos(completion: @escaping (Result<[Repo], Error>) -> Void) {
     let url = "https://api.github.com/user/repos"
-    
+    let headers = getHeaders()
     AF.request(url, method: .get, headers: headers)
       .responseDecodable(of: [Repo].self) { responce in
         switch responce.result {
@@ -37,7 +44,7 @@ class GitHubApi {
   func fetchCommits(for repo: Repo, completion: @escaping (Result<[CommitApiResponce], Error>) -> Void) {
     let repoName = repo.name
     let url = "https://api.github.com/repos/zabarik21/\(repoName)/commits"
-    print(url)
+    let headers = getHeaders()
     AF.request(url, method: .get, headers: headers)
       .responseDecodable(of: [CommitApiResponce].self) { responce in
         switch responce.result {
