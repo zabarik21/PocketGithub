@@ -24,7 +24,9 @@ class RepoViewHeader: UICollectionReusableView, ReuseIdProtocol {
   }
   
   func setTitle(title: String) {
-    titleLabel.text = title
+    DispatchQueue.main.async {
+      self.titleLabel.text = title
+    }
   }
   
   required init?(coder: NSCoder) {
@@ -42,8 +44,6 @@ extension RepoViewHeader {
   
   private func setupConstraints() {
     addSubview(titleLabel)
-    
-    let width = self.bounds.width
     
     titleLabel.snp.makeConstraints { make in
       make.horizontalEdges.equalToSuperview()

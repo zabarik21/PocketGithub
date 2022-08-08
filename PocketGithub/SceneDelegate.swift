@@ -26,10 +26,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   @available(iOS 13.0, *)
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     guard let windowScene = (scene as? UIWindowScene) else { return }
-    
     let window = UIWindow(windowScene: windowScene)
+    let viewController: UIViewController?
+    if let _ = StorageService.shared.getToken() {
+      let layout = CollectionViewLayoutFactory.shared.getReposListLayout(windowBounds: window.bounds)
+      let reposView = RepoListViewController(collectionViewLayout: layout)
+      viewController = MainNavigationController(rootViewController: reposView)
+    } else {
+      viewController = LoginViewController()
+    }
     self.window = window
-    let viewController = LoginViewController()
     window.rootViewController = viewController
     window.makeKeyAndVisible()
   }

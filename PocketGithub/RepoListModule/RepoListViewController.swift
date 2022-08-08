@@ -21,11 +21,21 @@ class RepoListViewController: UICollectionViewController {
   
   private var viewModels = [RepoCellViewModel]()
   
+  private var activityIndicator: UIActivityIndicatorView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     configurator.configure(with: self)
     setupCollectionView()
+    setupIndicator()
     presenter.viewDidLoad()
+  }
+  
+  private func setupIndicator() {
+    activityIndicator = UIActivityIndicatorView(style: .white)
+    activityIndicator.center = view.center
+    view.addSubview(activityIndicator)
+    activityIndicator.startAnimating()
   }
   
   private func setupCollectionView() {
@@ -46,8 +56,11 @@ class RepoListViewController: UICollectionViewController {
 extension RepoListViewController: RepoListViewInputProtocol {
   
   func updateList(_ viewModels: [RepoCellViewModel]) {
+    activityIndicator.stopAnimating()
     self.viewModels = viewModels
-    self.collectionView.reloadData()
+    DispatchQueue.main.async {
+      self.collectionView.reloadData()
+    }
   }
   
   func showError(_ message: String) {

@@ -12,9 +12,6 @@
 		7B9DC7AF289FB82E0076A2CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9DC7AE289FB82E0076A2CC /* Assets.xcassets */; };
 		7B9DC7B2289FB82E0076A2CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9DC7B0289FB82E0076A2CC /* LaunchScreen.storyboard */; };
 		7B9DC7BB289FC4F30076A2CC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7B9DC7BA289FC4F30076A2CC /* SnapKit */; };
-		7B9DC7BE289FC4FD0076A2CC /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7BD289FC4FD0076A2CC /* Validator.swift */; };
-		7B9DC7C4289FC5050076A2CC /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7C0289FC5050076A2CC /* PaddingTextField.swift */; };
-		7B9DC7C6289FC5050076A2CC /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7C2289FC5050076A2CC /* LoginTextField.swift */; };
 		7B9DC7C7289FC5050076A2CC /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7C3289FC5050076A2CC /* CircleImageView.swift */; };
 		7B9DC7CA289FC5080076A2CC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7C9289FC5080076A2CC /* LoginViewController.swift */; };
 		7B9DC7D2289FC50C0076A2CC /* UILabel + Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC7CD289FC50C0076A2CC /* UILabel + Init.swift */; };
@@ -62,9 +59,6 @@
 		7B9DC7AE289FB82E0076A2CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B9DC7B1289FB82E0076A2CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B9DC7B3289FB82E0076A2CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B9DC7BD289FC4FD0076A2CC /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		7B9DC7C0289FC5050076A2CC /* PaddingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
-		7B9DC7C2289FC5050076A2CC /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		7B9DC7C3289FC5050076A2CC /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		7B9DC7C9289FC5080076A2CC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7B9DC7CD289FC50C0076A2CC /* UILabel + Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel + Init.swift"; sourceTree = "<group>"; };
@@ -143,9 +137,7 @@
 				7B9DC7E5289FCD600076A2CC /* RepoListModule */,
 				7B9DC7DF289FC6230076A2CC /* Service */,
 				7B9DC7CB289FC50C0076A2CC /* Extension */,
-				7B9DC7C8289FC5080076A2CC /* Controllers */,
 				7B9DC7BF289FC5050076A2CC /* VIew */,
-				7B9DC7BC289FC4FD0076A2CC /* Helpers */,
 				7B9DC7A5289FB82C0076A2CC /* AppDelegate.swift */,
 				7B9DC7A7289FB82C0076A2CC /* SceneDelegate.swift */,
 				7B9DC7AE289FB82E0076A2CC /* Assets.xcassets */,
@@ -155,29 +147,12 @@
 			path = PocketGithub;
 			sourceTree = "<group>";
 		};
-		7B9DC7BC289FC4FD0076A2CC /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				7B9DC7BD289FC4FD0076A2CC /* Validator.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		7B9DC7BF289FC5050076A2CC /* VIew */ = {
 			isa = PBXGroup;
 			children = (
-				7B9DC7C0289FC5050076A2CC /* PaddingTextField.swift */,
-				7B9DC7C2289FC5050076A2CC /* LoginTextField.swift */,
 				7B9DC7C3289FC5050076A2CC /* CircleImageView.swift */,
 			);
 			path = VIew;
-			sourceTree = "<group>";
-		};
-		7B9DC7C8289FC5080076A2CC /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		7B9DC7CB289FC50C0076A2CC /* Extension */ = {
@@ -422,7 +397,6 @@
 				7B9DC7D4289FC50C0076A2CC /* UIView + Twitch.swift in Sources */,
 				7B9DC7D2289FC50C0076A2CC /* UILabel + Init.swift in Sources */,
 				7B9DC80528A009AA0076A2CC /* Commit.swift in Sources */,
-				7B9DC7BE289FC4FD0076A2CC /* Validator.swift in Sources */,
 				7B9DC7ED289FCDA20076A2CC /* RepoListViewController.swift in Sources */,
 				7B9DC7E1289FC62F0076A2CC /* GitHubApi.swift in Sources */,
 				7B9DC81F28A106BF0076A2CC /* LoginViewPresenter.swift in Sources */,
@@ -432,14 +406,12 @@
 				7B9DC80728A009C40076A2CC /* CommitApiResponce.swift in Sources */,
 				7B9DC7A8289FB82C0076A2CC /* SceneDelegate.swift in Sources */,
 				7B9DC7D7289FC50F0076A2CC /* RepoCountView.swift in Sources */,
-				7B9DC7C4289FC5050076A2CC /* PaddingTextField.swift in Sources */,
 				7B9DC80B28A009E50076A2CC /* RepoOwner.swift in Sources */,
 				7B9DC7FC289FEBFC0076A2CC /* CommitCellViewModel.swift in Sources */,
 				7B9DC7F6289FE5F80076A2CC /* CollectionViewLayoutFactory.swift in Sources */,
 				7B9DC82128A106D80076A2CC /* LoginViewConfigurator.swift in Sources */,
 				7B9DC7FA289FEB930076A2CC /* CommitsListView.swift in Sources */,
 				7B9DC81D28A106B10076A2CC /* LoginViewInteractor.swift in Sources */,
-				7B9DC7C6289FC5050076A2CC /* LoginTextField.swift in Sources */,
 				7B9DC7EB289FCD9C0076A2CC /* RepoListRouter.swift in Sources */,
 				7B9DC80F28A00A0D0076A2CC /* Repo.swift in Sources */,
 				7B9DC80D28A00A040076A2CC /* CommitAuthor.swift in Sources */,

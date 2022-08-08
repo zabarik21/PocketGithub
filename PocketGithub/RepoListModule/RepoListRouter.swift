@@ -18,11 +18,13 @@ class RepoListViewRouter: RepoListRouterProtocol {
   }
   
   func openCommitsViewController(with viewModels: [CommitCellViewModel]) {
-    guard let windowBounds = UIApplication.shared.windows.first?.bounds else { return }
     DispatchQueue.main.async {
-      let commitsViewController = CommitsListCollectionView(collectionViewLayout: CollectionViewLayoutFactory.shared.getCommitsListLayout(windowBounds: windowBounds))
-      self.viewController.navigationController?.pushViewController(commitsViewController, animated: true)
-      commitsViewController.viewModels = viewModels
+      guard let windowBounds = UIApplication.shared.windows.first?.bounds else { return }
+      DispatchQueue.main.async {
+        let commitsViewController = CommitsListCollectionView(collectionViewLayout: CollectionViewLayoutFactory.shared.getCommitsListLayout(windowBounds: windowBounds))
+        self.viewController.navigationController?.pushViewController(commitsViewController, animated: true)
+        commitsViewController.viewModels = viewModels
+    }
     }
   }
   

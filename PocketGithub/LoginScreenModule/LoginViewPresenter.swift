@@ -20,6 +20,12 @@ class LoginViewPresenter: LoginViewOutputProtocol {
   
   func loginButtonTouched() {
     interactor.startAuthentication()
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+      self.view.showAlert(
+        with: "Please wait",
+        message: "You will be logged in a few seconds"
+      )
+    }
   }
 }
 

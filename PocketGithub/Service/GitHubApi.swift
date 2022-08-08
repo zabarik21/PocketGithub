@@ -28,32 +28,36 @@ class GitHubApi {
   }
   
   func fetchRepos(completion: @escaping (Result<[Repo], Error>) -> Void) {
-    let url = "https://api.github.com/user/repos"
-    let headers = getHeaders()
-    AF.request(url, method: .get, headers: headers)
-      .responseDecodable(of: [Repo].self) { responce in
-        switch responce.result {
-        case .success(let repos):
-          completion(.success(repos))
-        case .failure(let error):
-          completion(.failure(error))
+    DispatchQueue.global(qos: .utility).async {
+      let url = "https://api.github.com/user/repos"
+      let headers = self.getHeaders()
+      AF.request(url, method: .get, headers: headers)
+        .responseDecodable(of: [Repo].self) { responce in
+          switch responce.result {
+          case .success(let repos):
+            completion(.success(repos))
+          case .failure(let error):
+            completion(.failure(error))
+          }
         }
-      }
+    }
   }
   
   func fetchCommits(for repo: Repo, completion: @escaping (Result<[CommitApiResponce], Error>) -> Void) {
-    let repoName = repo.name
-    let url = "https://api.github.com/repos/zabarik21/\(repoName)/commits"
-    let headers = getHeaders()
-    AF.request(url, method: .get, headers: headers)
-      .responseDecodable(of: [CommitApiResponce].self) { responce in
-        switch responce.result {
-        case .success(let commits):
-          completion(.success(commits))
-        case .failure(let error):
-          print(error)
-          completion(.failure(error))
+    DispatchQueue.global(qos: .utility).async {
+      let repoName = repo.name
+      let url = "https://api.github.com/repos/zabarik21/\(repoName)/commits"
+      let headers = self.getHeaders()
+      AF.request(url, method: .get, headers: headers)
+        .responseDecodable(of: [CommitApiResponce].self) { responce in
+          switch responce.result {
+          case .success(let commits):
+            completion(.success(commits))
+          case .failure(let error):
+            print(error)
+            completion(.failure(error))
+          }
         }
-      }
+    }
   }
 }

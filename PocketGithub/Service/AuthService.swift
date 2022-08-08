@@ -39,58 +39,62 @@ class AuthService {
   }
   
   func login(completion: @escaping (Result<Void, Error>) -> Void) {
-    oauth = OAuth2Swift(
-      consumerKey: AuthConstants.cliendId,
-      consumerSecret: AuthConstants.cliendSecret,
-      authorizeUrl: "https://github.com/login/oauth/authorize",
-      responseType: "token"
-    )
-    
-    oauth.allowMissingStateCheck = true
-    
-    oauth.authorize(
-      withCallbackURL: AuthConstants.authCallbackURI,
-      scope: "repo",
-      state: "") { result in
-        switch result {
-        case .success:
-          break
-        case .failure(let error):
-          completion(.failure(error))
-          return
+    DispatchQueue.global(qos: .utility).async {
+      self.oauth = OAuth2Swift(
+        consumerKey: AuthConstants.cliendId,
+        consumerSecret: AuthConstants.cliendSecret,
+        authorizeUrl: "https://github.com/login/oauth/authorize",
+        responseType: "token"
+      )
+      
+      self.oauth.allowMissingStateCheck = true
+      
+      self.oauth.authorize(
+        withCallbackURL: AuthConstants.authCallbackURI,
+        scope: "repo",
+        state: "") { result in
+          switch result {
+          case .success:
+            break
+          case .failure(let error):
+            completion(.failure(error))
+            return
+          }
         }
-      }
-    completion(.success(()))
+      completion(.success(()))
+    }
   }
   
   func handleCodeUrl(url: URL) {
-    guard let code = getCode(from: url) else { return }
-    
-    var items = [String: String]()
-    items["client_id"] = AuthConstants.cliendId
-    items["client_secret"] = AuthConstants.cliendSecret
-    items["code"] = code
-    items["redirect_uri"] = AuthConstants.authCallbackURI
-    
-    AF.request(
-      "https://github.com/login/oauth/access_token",
-      method: .post,
-      parameters: items,
-      headers: [HTTPHeader(
-        name: "Accept",
-        value: "application/json"
-      )]
-    )
-      .responseDecodable(of: AuthenticationTokenResponce.self) { result in
-        if let error = result.error {
-          print(error)
-        } else {
-          guard let accessToken = result.value?.access_token else { return }
-          self.token = accessToken
-          StorageService.shared.saveToken(token: accessToken)
-          self.pushNotification()
+    DispatchQueue.global(qos: .utility).async {
+      guard let code = self.getCode(from: url) else { return }
+      
+      var items = [String: String]()
+      items["client_id"] = AuthConstants.cliendId
+      items["client_secret"] = AuthConstants.cliendSecret
+      items["code"] = code
+      items["redirect_uri"] = AuthConstants.authCallbackURI
+      
+      AF.request(
+        "https://github.com/login/oauth/access_token",
+        method: .post,
+        parameters: items,
+        headers: [HTTPHeader(
+          name: "Accept",
+          value: "application/json"
+        )]
+      )
+        .responseDecodable(of: AuthenticationTokenResponce.self) { result in
+          if let error = result.error {
+            print(error)
+          } else {
+            guard let accessToken = result.value?.access_token else { return }
+            self.token = accessToken
+            StorageService.shared.saveToken(token: accessToken)
+            self.pushNotification()
+          }
         }
-      }
+    }
   }
    
   

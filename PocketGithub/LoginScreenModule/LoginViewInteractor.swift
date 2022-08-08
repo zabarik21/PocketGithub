@@ -21,16 +21,17 @@ class LoginViewInteractor: LoginViewInteractorInputProtocol {
   }
   
   func startAuthentication() {
-    authService.login(completion: { result in
-      switch result {
-      case .success:
-        break
-      case .failure(let error):
-        self.presenter.authenticatedFailedWithError(error)
-        return
-      }
-    })
-    
+    DispatchQueue.global().async {
+      self.authService.login(completion: { result in
+        switch result {
+        case .success:
+          break
+        case .failure(let error):
+          self.presenter.authenticatedFailedWithError(error)
+          return
+        }
+      })
+    }
     notifications.addObserver(
       self,
       selector: #selector(authenticationsucceed),
