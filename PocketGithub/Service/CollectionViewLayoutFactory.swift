@@ -11,11 +11,15 @@ import UIKit
 
 class CollectionViewLayoutFactory {
   
+  public enum LayoutConstants {
+    static let horizontalPadding: CGFloat = 15
+  }
+  
   static let shared = CollectionViewLayoutFactory()
   
   func getReposListLayout(windowBounds: CGRect) -> UICollectionViewFlowLayout {
     let layout = UICollectionViewFlowLayout()
-    let width = windowBounds.width - 15 * 2
+    let width = windowBounds.width - LayoutConstants.horizontalPadding * 2
     
     layout.scrollDirection = .vertical
     layout.minimumInteritemSpacing = 20
@@ -26,7 +30,7 @@ class CollectionViewLayoutFactory {
   
   func getCommitsListLayout(windowBounds: CGRect) -> UICollectionViewFlowLayout {
     let layout = UICollectionViewFlowLayout()
-    let width = windowBounds.width - 15 * 2
+    let width = windowBounds.width - LayoutConstants.horizontalPadding * 2
     
     layout.scrollDirection = .vertical
     layout.minimumInteritemSpacing = 8

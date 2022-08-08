@@ -52,6 +52,7 @@
 		7B9DC82328A106E30076A2CC /* LoginViewInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC82228A106E30076A2CC /* LoginViewInterfaces.swift */; };
 		7B9DC82628A107A10076A2CC /* UIVIewController + UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC82528A107A10076A2CC /* UIVIewController + UIAlertController.swift */; };
 		7B9DC82B28A12A530076A2CC /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC82A28A12A530076A2CC /* StorageService.swift */; };
+		7B9DC82E28A1377E0076A2CC /* RepoViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DC82D28A1377E0076A2CC /* RepoViewHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		7B9DC82228A106E30076A2CC /* LoginViewInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewInterfaces.swift; sourceTree = "<group>"; };
 		7B9DC82528A107A10076A2CC /* UIVIewController + UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController + UIAlertController.swift"; sourceTree = "<group>"; };
 		7B9DC82A28A12A530076A2CC /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		7B9DC82D28A1377E0076A2CC /* RepoViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 		7B9DC7E5289FCD600076A2CC /* RepoListModule */ = {
 			isa = PBXGroup;
 			children = (
+				7B9DC82C28A1375A0076A2CC /* RepoViewHeader */,
 				7B9DC7D5289FC50F0076A2CC /* RepoCountView */,
 				7B9DC7D8289FC5130076A2CC /* RepoCell */,
 				7B9DC7E6289FCD890076A2CC /* RepoListInteractor.swift */,
@@ -314,6 +317,14 @@
 				7B9DC82528A107A10076A2CC /* UIVIewController + UIAlertController.swift */,
 			);
 			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		7B9DC82C28A1375A0076A2CC /* RepoViewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DC82D28A1377E0076A2CC /* RepoViewHeader.swift */,
+			);
+			path = RepoViewHeader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B9DC7E7289FCD890076A2CC /* RepoListInteractor.swift in Sources */,
+				7B9DC82E28A1377E0076A2CC /* RepoViewHeader.swift in Sources */,
 				7B9DC7DC289FC5130076A2CC /* RepoCellViewModel.swift in Sources */,
 				7B9DC7D3289FC50C0076A2CC /* UIColor + Constants.swift in Sources */,
 				7B9DC7CA289FC5080076A2CC /* LoginViewController.swift in Sources */,

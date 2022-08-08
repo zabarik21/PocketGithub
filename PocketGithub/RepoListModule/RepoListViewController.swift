@@ -10,7 +10,12 @@ import UIKit
 
 
 class RepoListViewController: UICollectionViewController {
- 
+  
+  private enum RepoListConstants {
+    static let headerTitle = "Repositories"
+    static let headerHeight: CGFloat = 100
+  }
+  
   private let configurator = RepoListConfigurator()
   var presenter: RepoListViewOutputProtocol!
   
@@ -25,7 +30,15 @@ class RepoListViewController: UICollectionViewController {
   
   private func setupCollectionView() {
     collectionView.backgroundColor = .githubBg
-    collectionView.register(RepoCellCell.self, forCellWithReuseIdentifier: RepoCellCell.reuseId)
+    collectionView.register(
+      RepoCellCell.self,
+      forCellWithReuseIdentifier: RepoCellCell.reuseId
+    )
+    collectionView.register(
+      RepoViewHeader.self,
+      forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+      withReuseIdentifier: RepoViewHeader.reuseId
+    )
   }
   
 }
@@ -76,9 +89,28 @@ extension RepoListViewController {
   
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
+
 extension RepoListViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let width = collectionView.bounds.width - 15 * 2
     return CGSize(width: width, height: 140)
+  }
+  
+  override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    if kind == UICollectionView.elementKindSectionHeader {
+      guard let header = collectionView.dequeueReusableSupplementaryView(
+        ofKind: kind,
+        withReuseIdentifier: RepoViewHeader.reuseId,
+        for: indexPath
+      ) as? RepoViewHeader else { return UICollectionReusableView() }
+      header.setTitle(title: RepoListConstants.headerTitle)
+      return header
+    }
+    return UICollectionReusableView()
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    return CGSize(width: view.bounds.width, height: RepoListConstants.headerHeight)
   }
 }

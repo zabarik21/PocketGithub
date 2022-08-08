@@ -13,6 +13,10 @@ import UIKit
 
 class CommitsListCollectionView: UICollectionViewController {
   
+  private enum CommitsListConstnts {
+    static let headerTitle = "Commits"
+    static let headerHeight: CGFloat = 100
+  }
   
   public var viewModels = [CommitCellViewModel]() {
     didSet {
@@ -28,12 +32,17 @@ class CommitsListCollectionView: UICollectionViewController {
   private func setupCollectionView() {
     collectionView.backgroundColor = .githubBg
     collectionView.register(CommitCell.self, forCellWithReuseIdentifier: CommitCell.reuseId)
+    collectionView.register(
+      RepoViewHeader.self,
+      forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+      withReuseIdentifier: RepoViewHeader.reuseId
+    )
   }
   
 }
 
 // MARK: - DataSource
-extension CommitsListCollectionView {
+extension CommitsListCollectionView: UICollectionViewDelegateFlowLayout {
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CommitCell.reuseId, for: indexPath) as? CommitCell else {
@@ -58,4 +67,27 @@ extension CommitsListCollectionView {
     return 1
   }
   
+}
+
+
+// MARK: Header setup
+extension CommitsListCollectionView {
+  
+  override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    if kind == UICollectionView.elementKindSectionHeader {
+      guard let header = collectionView.dequeueReusableSupplementaryView(
+        ofKind: kind,
+        withReuseIdentifier: RepoViewHeader.reuseId,
+        for: indexPath
+      ) as? RepoViewHeader else { return UICollectionReusableView() }
+      header.setTitle(title: CommitsListConstnts.headerTitle)
+      return header
+    }
+    return UICollectionReusableView()
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    return CGSize(width: view.bounds.width, height: CommitsListConstnts.headerHeight)
+  }
+
 }
