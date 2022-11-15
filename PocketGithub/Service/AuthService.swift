@@ -8,6 +8,7 @@
 import Foundation
 import OAuthSwift
 import Alamofire
+import UIKit
 
 struct AuthenticationTokenResponce: Decodable {
   var access_token: String
@@ -20,6 +21,8 @@ class AuthService {
     static let cliendId = "1a9af791d200ed9ae525"
     static let cliendSecret = "fb66ec5f993635aa301146e21efb129da8e432f7"
     static let authCallbackURI = "pocket-github://oauth-callback"
+    static let aiuthorizeURL = "https://github.com/login/oauth/authorize"
+    static let responceType = "token"
   }
   
   public enum NotificatoinNames: String {
@@ -38,30 +41,25 @@ class AuthService {
     token = StorageService.shared.getToken()
   }
   
-  func login(completion: @escaping (Result<Void, Error>) -> Void) {
-    DispatchQueue.global(qos: .utility).async {
-      self.oauth = OAuth2Swift(
-        consumerKey: AuthConstants.cliendId,
-        consumerSecret: AuthConstants.cliendSecret,
-        authorizeUrl: "https://github.com/login/oauth/authorize",
-        responseType: "token"
-      )
-      
-      self.oauth.allowMissingStateCheck = true
-      
-      self.oauth.authorize(
-        withCallbackURL: AuthConstants.authCallbackURI,
-        scope: "repo",
-        state: "") { result in
-          switch result {
-          case .success:
-            break
-          case .failure(let error):
-            completion(.failure(error))
-            return
-          }
-        }
-      completion(.success(()))
+  func tryOauth() {
+    let authorizeUrl = URL(string: AuthConstants.aiuthorizeURL)!
+    var comps = URLComponents(url: authorizeUrl, resolvingAgainstBaseURL: true)!
+    
+    var items = [String: String]()
+    items["client_id"] = AuthConstants.cliendId
+    items["client_secret"] = AuthConstants.cliendSecret
+    items["redirect_uri"] = AuthConstants.authCallbackURI
+    
+    var query = [URLQueryItem]()
+    
+    for item in items {
+      query.append(URLQueryItem(name: item.key, value: item.value))
+    }
+    
+    comps.queryItems = query
+    
+    DispatchQueue.main.async {
+      UIApplication.shared.open(comps.url!, options: [:], completionHandler: nil)
     }
   }
   
@@ -96,7 +94,7 @@ class AuthService {
         }
     }
   }
-   
+  
   
   func pushNotification() {
     notificationCenter.post(

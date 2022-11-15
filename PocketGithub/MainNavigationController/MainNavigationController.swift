@@ -14,11 +14,7 @@ class MainNavigationController: UINavigationController {
   
   required  override init(rootViewController: UIViewController) {
     super.init(rootViewController: rootViewController)
-    setupNavigationBar()
-  }
-  
-  override init(nibName: String?, bundle: Bundle?) {
-    super.init(nibName: nil, bundle: nil)
+    setupNavigationBar() 
   }
   
   private func setupNavigationBar() {

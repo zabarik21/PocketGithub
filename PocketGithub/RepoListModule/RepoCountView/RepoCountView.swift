@@ -47,8 +47,9 @@ class RepoCountView: UIView {
     DispatchQueue.main.async {
       if newCount > 9999 {
         self.countLabel.text = "\(9999)+"
+      } else {
+        self.countLabel.text = "\(newCount)"
       }
-      self.countLabel.text = "\(newCount)"
     }
   }
   

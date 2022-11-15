@@ -14,8 +14,6 @@ class LoginViewController: UIViewController {
   private var logoView: UIImageView!
   private var signInButton: UIButton!
   
-  public var authService = AuthService.shared
-  
   var presenter: LoginViewOutputProtocol!
   private var configurator = LoginViewConfigurator()
   
